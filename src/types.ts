@@ -79,7 +79,7 @@ export type responseInterface<Data, Error> = {
   error?: Error
   revalidate: () => Promise<boolean>
   mutate: (
-    data?: Data | Promise<Data> | mutateCallback<Data>,
+    data?: Data | Promise<Data> | mutateCallback<Data> | null,
     shouldRevalidate?: boolean
   ) => Promise<Data | undefined>
   isValidating: boolean
